@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = cleanInput($_POST['password']);
     $confirm_password = cleanInput($_POST['confirm_password']);
     $full_name = cleanInput($_POST['full_name']);
-    //Hàm cleanInput() dùng để làm sạch: loại bỏ khoảng trắng, xử lý ký tự đặc biệt
+   
     
     // Lưu dữ liệu form
     $formData['username'] = $username;
