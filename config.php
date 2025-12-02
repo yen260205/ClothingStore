@@ -1,21 +1,22 @@
-<?php
+<? php
 // Lấy thông tin từ biến môi trường (Environment Variables)
-$db_host = getenv('DB_HOST') ? getenv('DB_HOST') : 'localhost';
-$db_user = getenv('DB_USER') ? getenv('DB_USER') : 'root';
-$db_pass = getenv('DB_PASS') ? getenv('DB_PASS') : '';
-$db_name = getenv('DB_NAME') ? getenv('DB_NAME') : 'clothing_store';
-$db_port = getenv('DB_PORT') ? getenv('DB_PORT') : 3306;
+$db_host = getenv('DB_HOST') ?: 'localhost';
+$db_user = getenv('DB_USER') ?: 'root';
+$db_pass = getenv('DB_PASS') ?: '';
+$db_name = getenv('DB_NAME') ?: 'clothing_store';
+$db_port = getenv('DB_PORT') ?  (int)getenv('DB_PORT') : 3306;
 
 define('DB_HOST', $db_host);
 define('DB_USER', $db_user);
 define('DB_PASS', $db_pass);
 define('DB_NAME', $db_name);
+define('DB_PORT', $db_port);
 
 // Kết nối database
 function getDBConnection() {
-    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, (int)getenv('DB_PORT')); 
+    $conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME, DB_PORT);
     
-    if (!$conn) {
+    if (! $conn) {
         die("Kết nối thất bại: " . mysqli_connect_error());
     }
     
