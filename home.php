@@ -10,7 +10,7 @@ if (!isLoggedIn()) {
 $conn = getDBConnection();
 $errors = [];
 $success = '';
-$mode = 'view'; // view, add, edit
+$mode = 'view'; 
 $editProduct = null;
 
 // Xử lý các action
