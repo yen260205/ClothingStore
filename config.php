@@ -4,7 +4,7 @@ $db_host = getenv('DB_HOST') ? getenv('DB_HOST') : 'localhost';
 $db_user = getenv('DB_USER') ? getenv('DB_USER') : 'root';
 $db_pass = getenv('DB_PASS') ? getenv('DB_PASS') : '';
 $db_name = getenv('DB_NAME') ? getenv('DB_NAME') : 'clothing_store';
-$db_port = getenv('DB_PORT') ? getenv('DB_PORT') : 3307;
+$db_port = getenv('DB_PORT') ? getenv('DB_PORT') : 3306;
 
 define('DB_HOST', $db_host);
 define('DB_USER', $db_user);
