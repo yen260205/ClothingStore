@@ -1,4 +1,4 @@
-<? php
+<?php
 // Lấy thông tin từ biến môi trường (Environment Variables)
 $db_host = getenv('DB_HOST') ?: 'localhost';
 $db_user = getenv('DB_USER') ?: 'root';
