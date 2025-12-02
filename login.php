@@ -5,6 +5,7 @@ require_once 'validation.php';
 // Nếu đã đăng nhập thì redirect về home
 if (isLoggedIn()) {
     redirect('home.php');
+    
 }
 
 $error = '';
